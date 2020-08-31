@@ -1,6 +1,6 @@
 body {
-	background-color:  #89C6FD;
-	color: #555;
+	background-color:  #808486;
+	color:#ffffff;
 	font: 17px Arial, Helvetica, sans-serif;
 	line-height: 1.5em;
 	margin: 0;
@@ -14,17 +14,23 @@ body {
 }
 
 
+
 #top-header {
-	background-color: #0977B3;
-	color: #fff;
+	background-color: #0c0c0c;
+	color:#ffffff;
+	
 }
+
 #links {
 	background-color: #000801;
-}
-#links a {
-	color:#808080;
 	text-align: right;
 }
+
+#links a {
+	color:#ffffff;
+	text-align: right;
+}
+
 #links li {
 	display: inline;
 }
@@ -44,15 +50,38 @@ body {
 	
 }
 
+#message-box1 {
 
-#message-box {
+	float: left;
+	width: 50%;	
+	margin-top: 15px;
+
+	}
+
+#message-box2 {
+
 	float: left;
 	width: 30%;
-	box-sizing: border-box;
-	margin-top: 15px;
-	border: 1px grey solid;
-	border-radius: 3px;
+    margin-top: 217px;
+
+	
 	}
+
+#message-box3 {
+
+	float: left;
+	width: 40%;
+	margin-top: 217px;
+	
+	}
+
+#message-box4 {
+
+	float: left;
+	width: 30%;
+	margin-top: 50px;
+	
+	}	
 	
 #sidewall {
 	float: left;
