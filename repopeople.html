@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Users</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	
 
-</head> 
+</head>
 
-   
 
-       <body>
-	         
-             <h1>Github Users</h1>
-             <button id="showInfo">Show Github Users</button>
-             <div id="showme"></div>
-          
-		   <script>
-		   
-                document.getElementById("showInfo").addEventListener('click', onProcess);
-				
-                function onProcess(){
-				
-                var req = new XMLHttpRequest();
-                req.open('GET', 'https://api.github.com/users', true);
-				
-                req.onload = function() {
-				
+<body>
+
+    <h1>Github Users</h1>
+    <button id="showInfo">Show Users</button>
+    <div id="showme"></div>
+    <script>
+        document.getElementById("showInfo").addEventListener('click', onProcess);
+        function onProcess(){
+            var req = new XMLHttpRequest();
+            req.open('GET', 'https://api.github.com/users', true);
+            req.onload = function() {
                 if(req.status==200){
-				
                 var people = JSON.parse(req.responseText)
                 var output= ' ';
-				
                 for(var i in people){
-                 output += 
-                 '<div class="people" >' 
-                  + '<li>ID: '+people[i].id+'</li>' + '<li>Login: '+people[i].login+'</li>' +
-                 '<li>Repos:'+people[i].repos_url +'</li>'
-				  + '</div>';
-                 }
-                 document.getElementById('showme').innerHTML = output;
-                 console.log("ok");
+                 output +=
+                '<div class="people" >' + '<img src="'+people[i].avatar_url+' width="100px" height="100px" >' +
+                '<li>ID: '+people[i].id+'</li>' +
+                '<li>Login: '+people[i].login+'</li>' + 
+                '</div>';
                 }
-        
-              } 
-               req.send();
-             }
-           </script>
-		  
-      </body>
-	  
+ 
+                document.getElementById('showme').innerHTML = output;
+                    console.log("ok");
+                }
+
+             
+            } 
+            req.send();
+        }
+    </script>
+</body>
 </html>

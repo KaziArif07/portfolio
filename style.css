@@ -16,8 +16,9 @@ body {
 	
 	width: 30%;
 	margin: auto;
-	overflow: auto;	
+	float: middle;	
 	margin-top: 30px;
+	
 	
 }
 
