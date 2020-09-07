@@ -12,7 +12,14 @@ body {
 	margin: auto;
 	overflow: auto;
 }
-
+.people {
+	
+	width: 30%;
+	margin: auto;
+	overflow: auto;	
+	margin-top: 30px;
+	
+}
 
 
 #top-header {
